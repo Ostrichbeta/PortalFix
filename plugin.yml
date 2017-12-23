@@ -1,0 +1,4 @@
+name: PortalFix
+main: com.ojbk.portalfix.main
+version: 1.0
+commands:
