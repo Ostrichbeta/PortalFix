@@ -25,7 +25,7 @@ public class Mylist implements Listener {
 			return;
 		}
 		//開始判斷
-		//判斷X方向
+		//判斷X方向2
 		int xx = (int)x; int yy = (int)y; int zz = (int)z ;
 		System.out.println( xx + " " + yy + " " + zz);
 		while (1 == 1) {

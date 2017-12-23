@@ -6,6 +6,7 @@ import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.entity.*;
 import org.bukkit.event.*;
+import org.bukkit.event.EventHandler;
 import org.bukkit.block.*;
 import org.bukkit.Material;
 
@@ -14,9 +15,9 @@ public class main extends JavaPlugin implements Listener{
 	@Override
 	public void onEnable() {
 		getServer().getPluginManager().registerEvents(this, this);
-		System.out.println("成功註冊偵聽氣");
+		System.out.println("成功註冊偵聽器");
 	}
-	
+	@EventHandler
 	public void onPlayerJoin(PlayerJoinEvent cp)  {
 		Player jpl = cp.getPlayer() ;
 		String PlayerName = jpl.getDisplayName() ;
@@ -57,9 +58,10 @@ public class main extends JavaPlugin implements Listener{
 		if( jdb2.getType().equals(Material.AIR) != true ) {
 			//頭頂上的方塊不是空氣
 			jdb2.setType(Material.AIR);
+			setb.setType(Material.AIR);
 			//設置為空氣
 		}
-		Location toooo = new Location( w , xx , yy+1 , zz );
+		Location toooo = new Location( w , xx + 0.5 , yy+1 , zz + 0.5 );
 		jpl.teleport(toooo);
 	}
 }
