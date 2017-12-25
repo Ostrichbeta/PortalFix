@@ -15,14 +15,14 @@ public class main extends JavaPlugin implements Listener{
 	@Override
 	public void onEnable() {
 		getServer().getPluginManager().registerEvents(this, this);
-		System.out.println("¦¨¥\µù¥U°»Å¥¾¹");
+		System.out.println("æˆåŠŸè¨»å†Šåµè½å™¨");
 	}
 	@EventHandler
 	public void onPlayerJoin(PlayerJoinEvent cp)  {
 		Player jpl = cp.getPlayer() ;
 		String PlayerName = jpl.getDisplayName() ;
 		System.out.println( PlayerName + "joined the game, start to see his or her block." );
-		Location k = jpl.getLocation() ; //Àò¨úª±®aªº¦ì¸m
+		Location k = jpl.getLocation() ; //ç²å–ç©å®¶çš„ä½ç½®Gay Soeng
 		double x = k.getX() ;
 		double y = k.getY() ;
 		double z = k.getZ() ;
@@ -35,20 +35,20 @@ public class main extends JavaPlugin implements Listener{
 		{
 			return;
 		}
-		//¶}©l§PÂ_
-		//§PÂ_X¤è¦V
+		//é–‹å§‹åˆ¤æ–·
+		//åˆ¤æ–·Xæ–¹å‘
 		int xx = (int)x; int yy = (int)y; int zz = (int)z ;
 		System.out.println( xx + " " + yy + " " + zz);
 		while (1 == 1) {
 			Block b = w.getBlockAt(xx, yy, zz);
 			System.out.println( xx + " " + yy + " " + zz);
 			if ( b.getType().equals(Material.OBSIDIAN)) {
-				//©Ò§PÂ_ªº¤è¶ô¬°¶ÂÂ`¥Û
+				//æ‰€åˆ¤æ–·çš„æ–¹å¡Šç‚ºé»‘æ›œçŸ³
 				break;
 			}
 			if ( yy >= 127 ) {
-				//´¡¥ó¥X¿ù
-				System.out.println( "±j¨î°h¥X´`Àô" );
+				//æ’ä»¶å‡ºéŒ¯
+				System.out.println( "å¼·åˆ¶é€€å‡ºå¾ªç’°" );
 				return;
 			}
 			yy++;
@@ -56,10 +56,10 @@ public class main extends JavaPlugin implements Listener{
 		Block setb = w.getBlockAt(xx, yy + 1, zz);
 		Block jdb2 = w.getBlockAt(xx, yy + 2, zz);
 		if( jdb2.getType().equals(Material.AIR) != true ) {
-			//ÀY³»¤Wªº¤è¶ô¤£¬OªÅ®ğ
+			//é ­é ‚ä¸Šçš„æ–¹å¡Šä¸æ˜¯ç©ºæ°£
 			jdb2.setType(Material.AIR);
 			setb.setType(Material.AIR);
-			//³]¸m¬°ªÅ®ğ
+			//è¨­ç½®ç‚ºç©ºæ°£
 		}
 		Location toooo = new Location( w , xx + 0.5 , yy+1 , zz + 0.5 );
 		jpl.teleport(toooo);
